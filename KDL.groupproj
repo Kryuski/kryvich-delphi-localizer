@@ -1,0 +1,86 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{cc4faa15-e222-4211-9f13-9795041e1058}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="lngupdate.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="kdlscan.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Demo\TestApp.dproj">
+            <Dependencies>Demo\TestDLL.dproj;Demo\TestPackage.dproj</Dependencies>
+        </Projects>
+        <Projects Include="Demo\TestDLL.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Demo\TestPackage.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <BorlandProject>
+                <Default.Personality/>
+            </BorlandProject>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="lngupdate">
+        <MSBuild Projects="lngupdate.dproj"/>
+    </Target>
+    <Target Name="lngupdate:Clean">
+        <MSBuild Projects="lngupdate.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="lngupdate:Make">
+        <MSBuild Projects="lngupdate.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="kdlscan">
+        <MSBuild Projects="kdlscan.dproj"/>
+    </Target>
+    <Target Name="kdlscan:Clean">
+        <MSBuild Projects="kdlscan.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="kdlscan:Make">
+        <MSBuild Projects="kdlscan.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TestApp" DependsOnTargets="TestDLL;TestPackage">
+        <MSBuild Projects="Demo\TestApp.dproj"/>
+    </Target>
+    <Target Name="TestApp:Clean" DependsOnTargets="TestDLL:Clean;TestPackage:Clean">
+        <MSBuild Projects="Demo\TestApp.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TestApp:Make" DependsOnTargets="TestDLL:Make;TestPackage:Make">
+        <MSBuild Projects="Demo\TestApp.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TestDLL">
+        <MSBuild Projects="Demo\TestDLL.dproj"/>
+    </Target>
+    <Target Name="TestDLL:Clean">
+        <MSBuild Projects="Demo\TestDLL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TestDLL:Make">
+        <MSBuild Projects="Demo\TestDLL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="TestPackage">
+        <MSBuild Projects="Demo\TestPackage.dproj"/>
+    </Target>
+    <Target Name="TestPackage:Clean">
+        <MSBuild Projects="Demo\TestPackage.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="TestPackage:Make">
+        <MSBuild Projects="Demo\TestPackage.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="lngupdate;kdlscan;TestApp;TestDLL;TestPackage"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="lngupdate:Clean;kdlscan:Clean;TestApp:Clean;TestDLL:Clean;TestPackage:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="lngupdate:Make;kdlscan:Make;TestApp:Make;TestDLL:Make;TestPackage:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

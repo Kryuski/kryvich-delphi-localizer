@@ -1,0 +1,337 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 475
+  ClientWidth = 480
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnClose = FormClose
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Lines.Strings = (
+      #1043#1101#1090#1099' '#1090#1101#1082#1089#1090' '#1085#1072#1087#1110#1089#1072#1085#1099' '#1085#1072' '#1073#1077#1083#1072#1088#1091#1089#1082#1072#1081' '#1084#1086#1074#1077'.'
+      ''
+      #1044#1101#1083#1100#1092#1110#1081#1089#1082#1110' '#1083#1072#1082#1072#1083#1110#1079#1072#1090#1072#1088' '#1050#1088#1099#1074#1110#1095#1072'.')
+    Position.X = 8.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 281.000000000000000000
+    Size.Height = 73.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Viewport.Width = 277.000000000000000000
+    Viewport.Height = 69.000000000000000000
+  end
+  object btnStrings: TButton
+    Position.X = 303.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 159.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = #1056#1101#1089#1091#1088#1089#1085#1099#1103' '#1088#1072#1076#1082#1110
+    OnClick = btnStringsClick
+  end
+  object btnNewForm: TButton
+    Action = actOpen
+    Enabled = True
+    ImageIndex = -1
+    Position.X = 303.000000000000000000
+    Position.Y = 63.000000000000000000
+    Size.Width = 159.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+  end
+  object Grid1: TGrid
+    CanFocus = True
+    ClipChildren = True
+    Position.X = 127.000000000000000000
+    Position.Y = 119.000000000000000000
+    Size.Width = 335.000000000000000000
+    Size.Height = 115.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Viewport.Width = 315.000000000000000000
+    Viewport.Height = 90.000000000000000000
+  end
+  object cbAutoTranslation: TCheckBox
+    IsChecked = True
+    Position.X = 303.000000000000000000
+    Position.Y = 96.000000000000000000
+    Size.Width = 154.000000000000000000
+    Size.Height = 19.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 10
+    Text = #1040#1118#1090#1072#1087#1077#1088#1072#1082#1083#1072#1076
+    OnChange = cbAutoTranslationChange
+  end
+  object ListBox1: TListBox
+    Position.X = 127.000000000000000000
+    Position.Y = 249.000000000000000000
+    Size.Width = 335.000000000000000000
+    Size.Height = 56.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 20
+    DisableFocusEffect = True
+    Items.Strings = (
+      #8470
+      #1053#1072#1079#1074#1072
+      #1050#1086#1096#1090
+      #1042#1072#1083#1102#1090#1072)
+    ItemWidth = 82.000000000000000000
+    DefaultItemStyles.ItemStyle = ''
+    DefaultItemStyles.GroupHeaderStyle = ''
+    DefaultItemStyles.GroupFooterStyle = ''
+    ListStyle = Horizontal
+    Viewport.Width = 331.000000000000000000
+    Viewport.Height = 52.000000000000000000
+  end
+  object pnlLanguage: TPanel
+    Position.X = 8.000000000000000000
+    Position.Y = 111.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 194.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 26
+    object btnLoad: TButton
+      Position.X = 6.000000000000000000
+      Position.Y = 98.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 25.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 1
+      Text = #1047#1072#1075#1088#1091#1079#1110#1094#1100
+      OnClick = btnLoadClick
+    end
+    object rgLanguage: TGroupBox
+      Position.X = 6.000000000000000000
+      Position.Y = 4.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 85.000000000000000000
+      Size.PlatformDefault = False
+      Text = #1052#1086#1074#1072':'
+      TabOrder = 2
+      object rbEnglish: TRadioButton
+        GroupName = 'Language'
+        IsChecked = True
+        Position.X = 4.000000000000000000
+        Position.Y = 16.000000000000000000
+        Size.Width = 90.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 1
+        Text = #1040#1085#1075#1077#1083#1100#1089#1082#1072#1103
+      end
+      object rbBelarusian: TRadioButton
+        GroupName = 'Language'
+        Position.X = 4.000000000000000000
+        Position.Y = 38.000000000000000000
+        Size.Width = 90.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 2
+        Text = #1041#1077#1083#1072#1088#1091#1089#1082#1072#1103
+      end
+      object rbRussian: TRadioButton
+        GroupName = 'Language'
+        Position.X = 4.000000000000000000
+        Position.Y = 60.000000000000000000
+        Size.Width = 90.000000000000000000
+        Size.Height = 19.000000000000000000
+        Size.PlatformDefault = False
+        TabOrder = 3
+        Text = #1056#1091#1089#1082#1072#1103
+      end
+      inline Frame11: TFrame1
+        Position.X = -8.000000000000000000
+        Position.Y = 200.000000000000000000
+        Size.Width = 470.000000000000000000
+        Size.Height = 73.000000000000000000
+        Size.PlatformDefault = False
+        inherited gbInFrame: TGroupBox
+          inherited lbInFrame: TListBox
+            Viewport.Width = 141.000000000000000000
+            Viewport.Height = 37.000000000000000000
+          end
+          inherited mmInFrame: TMemo
+            Lines.Strings = (
+              #1053#1086#1074#1099' '#1090#1101#1082#1089#1090' '#1076#1083#1103' '#1101#1083#1077#1084#1077#1085#1090#1072' '#1118' '
+              #1092#1088#1101#1081#1084#1077)
+            Viewport.Width = 182.000000000000000000
+            Viewport.Height = 37.000000000000000000
+          end
+        end
+      end
+    end
+    object btnTranslate: TButton
+      Position.X = 6.000000000000000000
+      Position.Y = 129.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 3
+      Text = #1055#1077#1088#1072#1082#1083#1072#1089#1094#1110
+      OnClick = btnTranslateClick
+    end
+    object btnTranslateAll: TButton
+      Position.X = 6.000000000000000000
+      Position.Y = 159.000000000000000000
+      Size.Width = 100.000000000000000000
+      Size.Height = 24.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 4
+      Text = #1055#1077#1088#1072#1082#1083#1072#1089#1094#1110' '#1118#1089#1077' !!!'
+      OnClick = btnTranslateAllClick
+    end
+  end
+  object btnQuit: TButton
+    Position.X = 368.000000000000000000
+    Position.Y = 411.000000000000000000
+    Size.Width = 94.000000000000000000
+    Size.Height = 31.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 32
+    Text = #1042#1099#1081#1089#1094#1110
+  end
+  object Text1: TText
+    Position.X = 8.000000000000000000
+    Position.Y = 387.000000000000000000
+    Size.Width = 354.000000000000000000
+    Size.Height = 54.000000000000000000
+    Size.PlatformDefault = False
+    Text = 
+      #1055#1072#1089#1087#1088#1072#1073#1091#1081#1094#1077' '#1079#1084#1103#1085#1110#1094#1100' '#1085#1072#1076#1087#1110#1089#1099' '#1085#1072' '#1092#1086#1088#1084#1077', '#1087#1072#1074#1099#1076#1072#1083#1103#1094#1100' '#1110' '#1087#1072#1087#1077#1088#1072#1085#1072#1079#1099#1074#1072#1094 +
+      #1100' '#1101#1083#1077#1084#1077#1085#1090#1099' '#1082#1110#1088#1072#1074#1072#1085#1085#1103' '#1110' '#1088#1101#1089#1091#1088#1089#1085#1099#1103' '#1088#1072#1076#1082#1110', '#1082#1072#1073' '#1087#1072#1073#1072#1095#1099#1094#1100' '#1103#1082' '#1087#1088#1072#1094#1091#1077' '#1089 +
+      #1110#1089#1090#1101#1084#1072' '#1082#1110#1088#1072#1074#1072#1085#1085#1103' '#1074#1077#1088#1089#1110#1103#1084#1110' '#1088#1072#1076#1082#1086#1118' (SVCS)'
+  end
+  object OpenDialog1: TOpenDialog
+    DefaultExt = '*.pas'
+    Filter = 
+      #1052#1086#1076#1091#1083#1110' '#1044#1101#1083#1100#1092#1110' (*.pas)|*.pas|'#1042#1101#1073'-'#1092#1072#1081#1083#1099' (*.htm;*.html)|*.htm;*.htm' +
+      'l|'#1055#1088#1072#1077#1082#1090#1099' '#1044#1101#1083#1100#1092#1110' (*.dpr)|*.dpr'
+    Title = #1040#1076#1095#1099#1085#1110#1094#1100' '#1092#1072#1081#1083
+    Left = 416
+    Top = 328
+  end
+  object MenuBar1: TMenuBar
+    Size.Width = 480.000000000000000000
+    Size.Height = 24.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 40
+    object MenuItem1: TMenuItem
+      Text = #1060#1072#1081#1083
+      object MenuItem6: TMenuItem
+        Action = actOpen
+        Enabled = True
+        Locked = True
+        ImageIndex = -1
+      end
+      object MenuItem7: TMenuItem
+        Locked = True
+        Text = '-'
+      end
+      object MenuItem8: TMenuItem
+        Action = actQuit
+        Enabled = True
+        Locked = True
+        ImageIndex = -1
+      end
+    end
+    object MenuItem2: TMenuItem
+      Text = #1055#1088#1072#1118#1082#1072
+    end
+    object MenuItem3: TMenuItem
+      Text = #1040#1082#1085#1086
+    end
+    object MenuItem4: TMenuItem
+      Text = #1041#1110#1073#1083#1110#1103#1090#1101#1082#1110
+      object MenuItem9: TMenuItem
+        Action = actMessageFromDLL
+        Enabled = True
+        Locked = True
+        ImageIndex = -1
+      end
+      object MenuItem10: TMenuItem
+        Action = actShowFormFromPackage
+        Enabled = True
+        Locked = True
+        ImageIndex = -1
+      end
+    end
+    object MenuItem5: TMenuItem
+      Text = #1044#1072#1074#1077#1076#1082#1072
+    end
+  end
+  object DataSource1: TDataSource
+    DataSet = ClientDataSet1
+    Left = 208
+    Top = 200
+  end
+  object ClientDataSet1: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 144
+    Top = 200
+    object ClientDataSet1ID: TIntegerField
+      DisplayLabel = #8470
+      FieldName = 'ID'
+    end
+    object ClientDataSet1OrderNo: TStringField
+      DisplayLabel = #1040#1088#1090#1099#1082#1091#1083
+      FieldName = 'OrderNo'
+      Size = 15
+    end
+    object ClientDataSet1Name: TStringField
+      DisplayLabel = #1053#1072#1079#1074#1072
+      FieldName = 'Name'
+    end
+    object ClientDataSet1Description: TStringField
+      DisplayLabel = #1040#1087#1110#1089#1072#1085#1085#1077
+      FieldName = 'Description'
+      Size = 100
+    end
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSource = DataSource1
+    ScopeMappings = <>
+    Left = 280
+    Top = 200
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 352
+    Top = 200
+    object LinkGridToDataSourceBindSourceDB1: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = Grid1
+      Columns = <>
+    end
+  end
+  object ActionList1: TActionList
+    Left = 424
+    Top = 200
+    object actOpen: TAction
+      Text = #1040#1076#1095#1099#1085#1110#1094#1100
+      OnExecute = actOpenExecute
+    end
+    object actQuit: TAction
+      Text = #1042#1099#1081#1089#1094#1110
+      OnExecute = actQuitExecute
+    end
+    object actMessageFromDLL: TAction
+      Text = #1055#1072#1074#1077#1076#1072#1084#1083#1077#1085#1085#1077' '#1079' DLL'
+      OnExecute = actMessageFromDLLExecute
+    end
+    object actShowFormFromPackage: TAction
+      Text = #1058#1101#1089#1090#1072#1074#1072#1103' '#1092#1086#1088#1084#1072' '#1079' '#1087#1072#1082#1077#1090#1072
+      OnExecute = actShowFormFromPackageExecute
+    end
+  end
+end
